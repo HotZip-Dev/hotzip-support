@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="actions stores">
-      <a class="btn btn-ember" href="https://addons.wago.io/addons/only-ore">Get it on Wago</a>
+      <a class="btn btn-ember" href="https://addons.wago.io/addons/only-ores">Get it on Wago</a>
       <a class="btn btn-ghost" href="https://www.curseforge.com/wow/addons/onlyores">Get it on CurseForge</a>
   </div>
   <article class="prose">
@@ -50,16 +50,19 @@
 <li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Hover to see how many spots you've saved. Drag it anywhere around the minimap's edge.</li>
 </ul>
 <h2>Commands</h2>
-<ul>
-<li><code>/oo</code> (or <code>/onlyores</code>): how many spots you've saved, plus the command list</li>
-<li><code>/oo show</code>, <code>/oo hide</code>, <code>/oo toggle</code>: show or hide all pins</li>
-<li><code>/oo minimap</code>: show or hide minimap pins only</li>
-<li><code>/oo button</code>: show or hide the minimap button</li>
-<li><code>/oo ignore &lt;node name&gt;</code>: stop recording a node type (full name, like <code>Copper Vein</code>) and remove its pins</li>
-<li><code>/oo ignore</code>: list the node types you're ignoring</li>
-<li><code>/oo unignore &lt;node name&gt;</code>: start recording it again</li>
-<li><code>/oo clear</code>: delete every saved spot (asks you to type <code>/oo clear confirm</code>)</li>
-</ul>
+<table>
+<thead><tr><th>Command</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><code>/oo</code> or <code>/onlyores</code></td><td>How many spots you've saved, plus the command list</td></tr>
+<tr><td><code>/oo show</code>, <code>/oo hide</code>, <code>/oo toggle</code></td><td>Show or hide all pins</td></tr>
+<tr><td><code>/oo minimap</code></td><td>Show or hide minimap pins only</td></tr>
+<tr><td><code>/oo button</code></td><td>Show or hide the minimap button</td></tr>
+<tr><td><code>/oo ignore &lt;node name&gt;</code></td><td>Stop recording a node type (full name, like <code>Copper Vein</code>) and remove its pins</td></tr>
+<tr><td><code>/oo ignore</code></td><td>List the node types you're ignoring</td></tr>
+<tr><td><code>/oo unignore &lt;node name&gt;</code></td><td>Start recording it again</td></tr>
+<tr><td><code>/oo clear</code></td><td>Delete every saved spot (asks you to type <code>/oo clear confirm</code>)</td></tr>
+</tbody>
+</table>
 <h2>Good to know</h2>
 <ul>
 <li>Only nodes <strong>you</strong> mine are recorded. OnlyOres doesn't scan the world, and no data leaves your game: no addon messages, no chat channels, no sharing.</li>

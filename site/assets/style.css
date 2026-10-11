@@ -166,6 +166,11 @@ a.banner:hover .more { color: var(--glow); }
 .prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 14px; }
 .prose li { margin-bottom: 8px; }
 .prose li::marker { color: var(--ember); }
+/* Tables in addon descriptions (Commands). display:block lets a wide table
+   scroll sideways on a phone instead of widening the page. */
+.prose table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 0 0 14px; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 14px 8px 0; border-bottom: 1px solid var(--ash); }
+.prose th { color: #fff; font-weight: 700; border-bottom-color: var(--blood); }
 
 .callout {
   background: var(--char); border: 1px solid var(--blood); border-left: 4px solid var(--ember);
