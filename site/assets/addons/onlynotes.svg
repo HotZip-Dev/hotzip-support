@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OnlyNotes">
+  <rect width="64" height="64" rx="14" fill="#08174E"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#0C49DA" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="32" y="41" text-anchor="middle" font-family="system-ui, Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#6B93FF">ON</text>
+</svg>
