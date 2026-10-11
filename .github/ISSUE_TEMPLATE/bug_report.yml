@@ -9,6 +9,8 @@ body:
       options:
         - OnlyOres
         - OnlyHerbs
+        - OnlyEnchants
+        - OnlyNotes
         - WowTogether
         - Other
     validations:
