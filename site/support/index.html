@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · HotZip Addons</title>
+<meta name="description" content="Report a bug or share an idea for a HotZip addon.">
+<meta name="theme-color" content="#120A09">
+<meta property="og:title" content="Support · HotZip Addons">
+<meta property="og:description" content="Report a bug or share an idea for a HotZip addon.">
+<link rel="icon" href="/hotzip-support/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/hotzip-support/assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/hotzip-support/"><img src="/hotzip-support/assets/logo.svg" alt=""><span><span class="hot">Hot</span>Zip Addons</span></a>
+    <nav aria-label="Main">
+      <a href="/hotzip-support/addons/">Addons</a>
+      <a href="/hotzip-support/support/" aria-current="page">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="wrap page-head">
+  <h1>Support</h1>
+  <p class="muted">Tell us what broke or what you'd like. No account needed.</p>
+
+  <form id="report" data-thanks="/hotzip-support/support/thanks/" novalidate>
+    <div>
+      <label for="addon">Addon</label>
+      <select id="addon" name="addon" required>
+        <option value="">Pick an addon</option>
+          <option>OnlyHerbs</option>
+          <option>OnlyOres</option>
+          <option>WowTogether</option>
+          <option>Other</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>This is a…</legend>
+      <div class="choice">
+        <label><input type="radio" name="type" value="bug" checked> Bug</label>
+        <label><input type="radio" name="type" value="idea"> Idea</label>
+      </div>
+    </fieldset>
+
+    <div id="version-field">
+      <label for="version">Addon version <span class="hint">Optional. Shown in the AddOns list at character select, e.g. v1.0.2.</span></label>
+      <input type="text" id="version" name="version" maxlength="40" autocomplete="off">
+    </div>
+
+    <div>
+      <label for="details"><span id="details-label">What happened?</span> <span class="hint" id="details-hint">What you did, what you expected, and what happened instead.</span></label>
+      <textarea id="details" name="details" maxlength="5000" required></textarea>
+    </div>
+
+    <div id="errors-field">
+      <label for="errors">Error text <span class="hint">Optional. Turn errors on with <code>/console scriptErrors 1</code>, or use BugSack, then paste the error here.</span></label>
+      <textarea id="errors" name="errors" class="mono" maxlength="8000" spellcheck="false"></textarea>
+    </div>
+
+    <div class="trap" aria-hidden="true">
+      <label for="website">Leave this empty</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <p class="form-note">Reports are posted publicly on GitHub, so please don't include personal info.</p>
+    <p class="callout" id="form-closed" hidden>The form opens soon. Please check back in a few days.</p>
+
+    <div class="actions">
+      <button class="btn btn-ember" type="submit"><span id="submit-label">Send report</span></button>
+      <span id="form-status" class="form-status" role="status"></span>
+    </div>
+  </form>
+
+</section>
+<script src="/hotzip-support/assets/support.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="/hotzip-support/support/">Support</a>
+      <a href="/hotzip-support/privacy/">Privacy</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

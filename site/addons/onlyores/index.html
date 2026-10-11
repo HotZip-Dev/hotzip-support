@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnlyOres · HotZip Addons</title>
+<meta name="description" content="Mine a node and OnlyOres remembers it: pins on your world map and minimap, a last-mined timer, and distance to nearby veins.">
+<meta name="theme-color" content="#120A09">
+<meta property="og:title" content="OnlyOres · HotZip Addons">
+<meta property="og:description" content="Mine a node and OnlyOres remembers it: pins on your world map and minimap, a last-mined timer, and distance to nearby veins.">
+<link rel="icon" href="/hotzip-support/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/hotzip-support/assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/hotzip-support/"><img src="/hotzip-support/assets/logo.svg" alt=""><span><span class="hot">Hot</span>Zip Addons</span></a>
+    <nav aria-label="Main">
+      <a href="/hotzip-support/addons/" aria-current="page">Addons</a>
+      <a href="/hotzip-support/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="wrap">
+  <div class="addon-head">
+    <img class="icon icon-lg" src="/hotzip-support/assets/addons/onlyores.png" alt="OnlyOres logo" width="112" height="112">
+    <div>
+      <h1>OnlyOres</h1>
+      <p>Mine a node and OnlyOres remembers it: pins on your world map and minimap, a last-mined timer, and distance to nearby veins.</p>
+      <span class="badge">Latest: v1.0.2</span>
+    </div>
+  </div>
+  <div class="actions stores">
+      <a class="btn btn-ember" href="https://addons.wago.io/addons/only-ore">Get it on Wago</a>
+      <a class="btn btn-ghost" href="https://www.curseforge.com/wow/addons/onlyores">Get it on CurseForge</a>
+  </div>
+  <article class="prose">
+<p>OnlyOres remembers every ore node you mine and puts it on your map, so you can build your own mining routes and see how long ago each spot was last mined.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Automatic recording.</strong> Mine a node and its spot is saved, with a short chat note the first time. No setup, no imports.</li>
+<li><strong>World map pins.</strong> Each saved spot shows the icon of the ore you last mined there. Hover to see the ore type, how long ago you last mined it, and your visits and taps.</li>
+<li><strong>Minimap rings.</strong> Nearby spots show as a ring in the ore's color. When the vein is up, the <em>Find Minerals</em> dot appears inside the ring, so you can tell at a glance whether it's there. Hover a ring for its distance and last-mined time.</li>
+<li><strong>Distance to the next vein.</strong> The 3 nearest spots out of minimap range stick to the minimap's edge with their distance in yards, like party member arrows. Works with a rotating or square minimap.</li>
+<li><strong>Shared spawn points.</strong> When the same spot rolls different ores (Tin/Silver, Iron/Gold), they stay on one pin, and its tooltip lists every ore you've seen there.</li>
+<li><strong>Built for multi-tap veins.</strong> Forever veins take 1-4 hits. Hitting the same vein again within 2 minutes counts as one visit.</li>
+<li><strong>Waypoints.</strong> Left-click a world map pin to set a waypoint to it.</li>
+<li><strong>Forget a spot.</strong> Shift + right-click a world map pin to remove that one spot.</li>
+<li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Hover to see how many spots you've saved. Drag it anywhere around the minimap's edge.</li>
+</ul>
+<h2>Commands</h2>
+<ul>
+<li><code>/oo</code> (or <code>/onlyores</code>): how many spots you've saved, plus the command list</li>
+<li><code>/oo show</code>, <code>/oo hide</code>, <code>/oo toggle</code>: show or hide all pins</li>
+<li><code>/oo minimap</code>: show or hide minimap pins only</li>
+<li><code>/oo button</code>: show or hide the minimap button</li>
+<li><code>/oo ignore &lt;node name&gt;</code>: stop recording a node type (full name, like <code>Copper Vein</code>) and remove its pins</li>
+<li><code>/oo ignore</code>: list the node types you're ignoring</li>
+<li><code>/oo unignore &lt;node name&gt;</code>: start recording it again</li>
+<li><code>/oo clear</code>: delete every saved spot (asks you to type <code>/oo clear confirm</code>)</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+<li>Only nodes <strong>you</strong> mine are recorded. OnlyOres doesn't scan the world, and no data leaves your game: no addon messages, no chat channels, no sharing.</li>
+<li>Your data is saved per account, so all your characters build the same map.</li>
+<li>Nothing is recorded inside dungeons and other instances, where the game gives no map position.</li>
+</ul>
+  </article>
+  <div class="callout">
+    <p><strong>Found a bug or have an idea?</strong> Tell us on the <a href="/hotzip-support/support/?addon=OnlyOres">support page</a>. No account needed.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="/hotzip-support/support/">Support</a>
+      <a href="/hotzip-support/privacy/">Privacy</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HotZip">
+  <defs>
+    <linearGradient id="hz-ember" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FB9831"/>
+      <stop offset="1" stop-color="#E94E0D"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="#1A0E0C" stroke="#4F120B" stroke-width="2"/>
+  <polygon fill="url(#hz-ember)" points="12,10 52,10 52,18 34,30 44,30 20,46 52,46 52,54 12,54 12,46 30,34 20,34 44,18 12,18"/>
+</svg>
