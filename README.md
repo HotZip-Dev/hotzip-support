@@ -15,6 +15,7 @@ aren't checked often, so please post here.
 | OnlyHerbs | Remembers where you picked herbs and shows it on your map |
 | OnlyEnchants | Plans your Enchanting leveling from 1 to 300 |
 | OnlyNotes | Your own notes on players, NPCs, items and map spots |
+| OnlyRares | Rare mob alerts and kill tracking |
 | WowTogether | Find leveling buddies |
 
 ## A good bug report has
