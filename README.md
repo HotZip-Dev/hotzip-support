@@ -16,6 +16,7 @@ aren't checked often, so please post here.
 | OnlyEnchants | Plans your Enchanting leveling from 1 to 300 |
 | OnlyNotes | Your own notes on players, NPCs, items and map spots |
 | OnlyRares | Rare mob alerts and kill tracking |
+| OnlySplits | Speed leveling splits, where your time went, and quest plans |
 | WowTogether | Find leveling buddies |
 
 ## A good bug report has

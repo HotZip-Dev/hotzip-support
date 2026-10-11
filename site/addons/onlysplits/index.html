@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnlySplits · HotZip Addons</title>
+<meta name="description" content="Times every level against your best run, shows where each minute went (combat, travel, town, deaths), and lets you record, edit and follow quest routes. Speed leveling splits for World of Warcraft: Forever.">
+<meta name="theme-color" content="#0D1018">
+<meta property="og:title" content="OnlySplits · HotZip Addons">
+<meta property="og:description" content="Times every level against your best run, shows where each minute went (combat, travel, town, deaths), and lets you record, edit and follow quest routes. Speed leveling splits for World of Warcraft: Forever.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt=""><span><span class="hot">Hot</span>Zip Addons</span></a>
+    <nav aria-label="Main">
+      <a href="/addons/" aria-current="page">Addons</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="wrap">
+  <div class="addon-head">
+    <img class="icon icon-lg" src="/assets/addons/onlysplits.png" alt="OnlySplits logo" width="112" height="112">
+    <div>
+      <h1>OnlySplits</h1>
+      <p>Times every level against your best run, shows where each minute went (combat, travel, town, deaths), and lets you record, edit and follow quest routes. Speed leveling splits for World of Warcraft: Forever.</p>
+      <span class="badge">Latest: 1.0.0</span>
+    </div>
+  </div>
+  <div class="actions stores">
+      <a class="btn btn-ember" href="https://addons.wago.io/addons/only-splits">Get it on Wago</a>
+      <a class="btn btn-ghost" href="https://www.curseforge.com/wow/addons/only-splits">Get it on CurseForge</a>
+  </div>
+  <article class="prose">
+<p>OnlySplits times every level you gain against your best run, shows where each minute went, and helps you record, refine and follow a quest plan.</p>
+<h2>What are splits?</h2>
+<p>Speedrunners break a run into checkpoints called <strong>splits</strong> and time each one. Comparing every split with your <strong>personal best (PB)</strong> shows exactly where you gained or lost time, not just your final total.</p>
+<p>In leveling, every level is a split. OnlySplits times each level in played time and compares it with your best run. You see that level 23 took 12 minutes longer than last time, and why: a long walk back to town, a death, a slow quest. Fix those spots and your next character levels faster. Not racing? It still shows where your playtime goes.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Level splits.</strong> Every ding is a split in played time. Δ PB compares it with your other characters of the same class, Δ All with your best on any character.</li>
+<li><strong>Where the time went.</strong> Every second counts as combat, travel, town, dead, idle or flight, solo or grouped. Each level's biggest time sink is highlighted.</li>
+<li><strong>XP sources.</strong> Quest, kill and other XP, rested bonus, deaths and hearthstones. A &quot;fair pace&quot; shows your speed without the rested bonus.</li>
+<li><strong>Quest timings.</strong> How long each quest took to do and to hand in, and its XP per minute, slowest first.</li>
+<li><strong>Town stops.</strong> Vendor and trainer visits with the gold you sold, bought and spent on training, and the spells you learned.</li>
+<li><strong>Split bar.</strong> Your level, time vs PB, XP per hour, time to level and your plan's next steps. Hover it for this level's breakdown.</li>
+<li><strong>Level report.</strong> Click a level for a <strong>Report</strong> and a <strong>Timeline</strong> of every event. <strong>Copy</strong> turns either into text.</li>
+<li><strong>Record a plan.</strong> <strong>Record new</strong> builds a plan while you play: your quests, vendor and trainer stops, and the progress you make on the way.</li>
+<li><strong>Follow a plan.</strong> <strong>Load plan</strong> shows your next steps and never changes the plan. It flags steps you missed, warns before training you can't afford, and reminds you when training is due.</li>
+<li><strong>Step times.</strong> Every plan step shows how long it took you and how that compares with your best.</li>
+<li><strong>Plan Builder.</strong> Drag steps, add quests by name or ID, and make a plan from part of a run. Set a default plan for your race and class.</li>
+<li><strong>New characters.</strong> Your first login asks once: record a new plan, load one, or don't log this character.</li>
+<li><strong>Built-in quest data.</strong> Each quest's level, quest giver and turn-in NPC, with an icon when your character can't take it yet.</li>
+<li><strong>Copy as Markdown.</strong> Your splits and plans, ready to paste into Discord or your notes.</li>
+<li><strong>Stop logging.</strong> Turn it off on characters you're not speed leveling: no tracking and no bar.</li>
+<li><strong>Minimap button.</strong> Left-click opens the splits window, right-click shows or hides the bar. Drag it around the minimap.</li>
+</ul>
+<h2>Commands</h2>
+<table>
+<thead><tr><th>Command</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><code>/os</code></td><td>Open or close the splits window (<code>/onlysplits</code> also works)</td></tr>
+<tr><td><code>/os stop</code>, <code>/os start</code></td><td>Stop or start logging this character</td></tr>
+<tr><td><code>/os bar</code></td><td>Show or hide the split bar</td></tr>
+<tr><td><code>/os button</code></td><td>Show or hide the minimap button</td></tr>
+<tr><td><code>/os pb</code>, <code>/os pb all</code></td><td>Compare Δ PB with same-class characters, or with all of them</td></tr>
+<tr><td><code>/os errors</code></td><td>Show recent errors (please include them in bug reports)</td></tr>
+</tbody>
+</table>
+<h2>Good to know</h2>
+<ul>
+<li><strong>Nothing leaves your game.</strong> OnlySplits sends no addon messages and posts nothing to chat channels. Your runs and plans stay in your own SavedVariables.</li>
+<li>Data is saved <strong>per account</strong>: every character's splits count toward your PBs, your plans are shared by all your characters, and your runs survive beta character wipes.</li>
+<li>Times are <strong>played time</strong>, so logged-out time never counts. OnlySplits checks your played time at login and after each ding, so the usual /played lines show up in chat.</li>
+<li>A level you only partly logged (installed mid-level, or stopped and resumed) is marked partial: its time counts, but never for or against a PB.</li>
+</ul>
+  </article>
+  <div class="callout">
+    <p><strong>Found a bug or have an idea?</strong> Tell us on the <a href="/support/?addon=OnlySplits">support page</a>. No account needed.</p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

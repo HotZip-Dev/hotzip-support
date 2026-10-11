@@ -12,6 +12,7 @@ body:
         - OnlyEnchants
         - OnlyNotes
         - OnlyRares
+        - OnlySplits
         - WowTogether
         - Other
     validations:
