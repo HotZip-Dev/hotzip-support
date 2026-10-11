@@ -1,0 +1,39 @@
+name: Bug report
+description: Something isn't working
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: addon
+    attributes:
+      label: Addon
+      options:
+        - OnlyOres
+        - OnlyHerbs
+        - WowTogether
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Addon version
+      description: Shown in the in-game AddOns list (character select → AddOns).
+      placeholder: v1.0.2
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error text
+      description: Paste any Lua error. Turn errors on with `/console scriptErrors 1`, or use BugSack.
+      render: text
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else?
+      description: Screenshots, other addons you use, when it started.

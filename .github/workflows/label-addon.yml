@@ -1,0 +1,23 @@
+# Adds the addon picked in the issue form as a label (OnlyOres, OnlyHerbs...).
+name: Label by addon
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  issues: write
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || "";
+            const m = body.match(/### Addon\s+(\S+)/);
+            if (!m || m[1] === "Other" || m[1] === "_No") return;
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: [m[1]],
+            });
