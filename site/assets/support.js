@@ -1,12 +1,12 @@
 // Support form: posts the report to the relay, which opens a GitHub issue.
-// ENDPOINT stays empty until the relay is live; the form then points people to GitHub.
+// The relay address comes from the form (data-endpoint); empty means the form
+// isn't open yet and shows a short note instead.
 (function () {
   "use strict";
 
-  var ENDPOINT = "";
-
   var form = document.getElementById("report");
   if (!form) return;
+  var ENDPOINT = form.getAttribute("data-endpoint") || "";
 
   var status = document.getElementById("form-status");
   var submit = form.querySelector("button[type=submit]");

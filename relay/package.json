@@ -1,0 +1,13 @@
+{
+  "name": "hotzip-support-relay",
+  "private": true,
+  "description": "Turns the hotzip.dev support form into GitHub issues.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
