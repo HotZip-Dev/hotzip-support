@@ -36,7 +36,7 @@ const ORIGINS = (process.env.ALLOWED_ORIGINS || "https://hotzip.dev").split(",")
 const PORT = Number(process.env.PORT) || 8080;
 
 // Addons people can report on. Each has a matching label in the repo.
-const ADDONS = new Set(["OnlyOres", "OnlyHerbs", "OnlyEnchants", "OnlyNotes", "OnlySplits", "WowTogether", "Other"]);
+const ADDONS = new Set(["OnlyOres", "OnlyHerbs", "OnlyEnchants", "OnlyNotes", "OnlyRares", "OnlySplits", "WowTogether", "Other"]);
 const TYPES = { bug: "Bug", idea: "Idea" };
 
 const LIMITS = { body: 20000, version: 40, details: 5000, errors: 8000 };
