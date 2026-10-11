@@ -1,18 +1,20 @@
-/* HotZip Addons: embers and arcane blue. Palette notes live outside the repo. */
+/* HotZip Addons: "Midnight": ember and arcane accents on a blue-black base.
+   Palette notes live outside the repo. */
 :root {
-  --coal: #120A09;
-  --char: #1A0E0C;
-  --ash: #2C1510;
-  --blood: #4F120B;
-  --crimson: #8F2C12;
+  --coal: #0D1018;
+  --char: #141824;
+  --ash: #1C2130;
+  --blood: #2A2F45;
+  --crimson: #4A3A55;
   --ember: #E94E0D;
   --glow: #FB9831;
   --arcane: #0C49DA;
   --arcane-light: #6B93FF;
   --night: #08174E;
-  --text: #F4E9E4;
-  --muted: #CAADAE;
-  --dim: #92758A;
+  --text: #E6E4EC;
+  --strong: #F1F0F6;
+  --muted: #AEB0C0;
+  --dim: #8A8EA3;
   --radius: 10px;
   --wrap: 960px;
   --mono: ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
@@ -29,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(ellipse 80% 340px at 50% -60px, rgba(233, 78, 13, 0.28), transparent 70%),
+    radial-gradient(ellipse 70% 220px at 50% -90px, rgba(233, 78, 13, 0.13), transparent 70%),
     var(--coal);
   color: var(--text);
   font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -48,7 +50,7 @@ h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 12px; }
 h2 { font-size: 1.4rem; margin: 40px 0 12px; }
 h3 { font-size: 1.1rem; margin: 0 0 6px; }
 p { margin: 0 0 14px; }
-strong { color: #fff; }
+strong { color: var(--strong); }
 code {
   font-family: var(--mono);
   font-size: 0.9em;
@@ -62,7 +64,7 @@ code {
 .dim { color: var(--dim); font-size: 0.92rem; }
 
 /* Header and footer */
-.site-header { border-bottom: 1px solid var(--blood); background: rgba(26, 14, 12, 0.7); }
+.site-header { border-bottom: 1px solid var(--blood); background: rgba(20, 24, 36, 0.75); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
 .brand { position: relative; display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; font-size: 1.15rem; }
 .brand img { width: 36px; height: 36px; transition: filter 0.4s; }
@@ -142,7 +144,7 @@ code {
 .banners { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
 .banner {
   display: flex; align-items: center; gap: 22px;
-  background: linear-gradient(90deg, rgba(8, 23, 78, 0.55), var(--char) 45%);
+  background: linear-gradient(90deg, rgba(8, 23, 78, 0.45), var(--char) 45%);
   border: 1px solid var(--blood); border-radius: var(--radius);
   padding: 16px 24px 16px 16px; color: var(--text); text-decoration: none;
   transition: border-color 0.15s, transform 0.15s, background-color 0.15s;
@@ -170,7 +172,7 @@ a.banner:hover .more { color: var(--glow); }
    scroll sideways on a phone instead of widening the page. */
 .prose table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 0 0 14px; }
 .prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 14px 8px 0; border-bottom: 1px solid var(--ash); }
-.prose th { color: #fff; font-weight: 700; border-bottom-color: var(--blood); }
+.prose th { color: var(--strong); font-weight: 700; border-bottom-color: var(--blood); }
 
 .callout {
   background: var(--char); border: 1px solid var(--blood); border-left: 4px solid var(--ember);
