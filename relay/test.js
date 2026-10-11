@@ -30,9 +30,17 @@ const fakeGitHub = http.createServer((req, res) => {
       res.writeHead(201, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ token: "installation-token", expires_at: new Date(Date.now() + 3600e3).toISOString() }));
     }
-    received.push({ url: req.url, auth: req.headers.authorization, issue: JSON.parse(body) });
+    const lab = req.url.match(/^\/repos\/[^/]+\/[^/]+\/issues\/(\d+)\/labels$/);
+    if (lab) { // like GitHub: labels are added in a second call
+      received[Number(lab[1]) - 1].labels = JSON.parse(body).labels;
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end("[]");
+    }
+    const issue = JSON.parse(body);
+    received.push({ url: req.url, auth: req.headers.authorization, issue, sentLabels: issue.labels, labels: [] });
+    const number = received.length;
     res.writeHead(201, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ html_url: `https://github.com/HotZip-Dev/hotzip-support/issues/${received.length}` }));
+    res.end(JSON.stringify({ number, html_url: `https://github.com/HotZip-Dev/hotzip-support/issues/${number}` }));
   });
 });
 
@@ -78,7 +86,8 @@ const BUG = { addon: "OnlyOres", type: "bug", version: "v1.0.3", details: "Pins 
     check("CORS header is hotzip.dev", r.acao === ORIGIN, r.acao);
     check("posts to the right repo with the token", got && got.url === "/repos/HotZip-Dev/hotzip-support/issues" && got.auth === "Bearer test-token", JSON.stringify(got && { url: got.url, auth: got.auth }));
     check("title is '[Bug] OnlyOres: first line…'", got && got.issue.title === "[Bug] OnlyOres: Pins vanish after /reload…", got && got.issue.title);
-    check("labels are bug + OnlyOres", got && JSON.stringify(got.issue.labels) === '["bug","OnlyOres"]', got && JSON.stringify(got.issue.labels));
+    check("labels are bug + OnlyOres", got && JSON.stringify(got.labels) === '["bug","OnlyOres"]', got && JSON.stringify(got.labels));
+    check("labels are added after creating, not in the create call", got && got.sentLabels === undefined, got && JSON.stringify(got.sentLabels));
     check("body has the form's ### Addon layout", got && got.issue.body.startsWith("### Addon\n\nOnlyOres\n"), got && got.issue.body.slice(0, 40));
     check("error text is in a code block", got && got.issue.body.includes("```text\nInterface"), "");
 
@@ -86,10 +95,10 @@ const BUG = { addon: "OnlyOres", type: "bug", version: "v1.0.3", details: "Pins 
     const idea = received[1];
     check("idea creates an issue", r.status === 201, r.status);
     check("idea skips version and error text", idea && !idea.issue.body.includes("v9") && !idea.issue.body.includes("dropped") && idea.issue.body.includes("### Your idea"), idea && idea.issue.body);
-    check("idea labels are idea + WowTogether", idea && JSON.stringify(idea.issue.labels) === '["idea","WowTogether"]', idea && JSON.stringify(idea.issue.labels));
+    check("idea labels are idea + WowTogether", idea && JSON.stringify(idea.labels) === '["idea","WowTogether"]', idea && JSON.stringify(idea.labels));
 
     r = await call(relayPort, { ip: "3.3.3.3", body: { addon: "Other", type: "bug", details: "Something else broke" } });
-    check("'Other' gets only the bug label", r.status === 201 && JSON.stringify(received[2].issue.labels) === '["bug"]', JSON.stringify(received[2] && received[2].issue.labels));
+    check("'Other' gets only the bug label", r.status === 201 && JSON.stringify(received[2].labels) === '["bug"]', JSON.stringify(received[2] && received[2].labels));
 
     r = await call(relayPort, { ip: "4.4.4.4", body: { addon: "OnlyOres", type: "bug", details: "ping @octocat and ``` break out\n```\nhi" } });
     const safe = received[3] && received[3].issue.body;

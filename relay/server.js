@@ -177,14 +177,17 @@ async function githubToken() {
   return cachedToken.token;
 }
 
-async function createIssue(issue) {
-  const res = await fetch(`${API}/repos/${REPO}/issues`, {
-    method: "POST",
-    headers: { ...GH_HEADERS, "Authorization": `Bearer ${await githubToken()}`, "Content-Type": "application/json" },
-    body: JSON.stringify(issue),
-  });
+// GitHub silently drops labels on a new issue unless the creator can push to
+// the repo. Our credential only has Issues access, so create first, then label.
+async function createIssue({ labels, ...issue }) {
+  const headers = { ...GH_HEADERS, "Authorization": `Bearer ${await githubToken()}`, "Content-Type": "application/json" };
+  const res = await fetch(`${API}/repos/${REPO}/issues`, { method: "POST", headers, body: JSON.stringify(issue) });
   if (!res.ok) throw new Error(`GitHub answered ${res.status}`);
   const data = await res.json();
+  if (labels.length) {
+    const lab = await fetch(`${API}/repos/${REPO}/issues/${data.number}/labels`, { method: "POST", headers, body: JSON.stringify({ labels }) });
+    if (!lab.ok) console.error(`could not label the report: GitHub answered ${lab.status}`); // the report itself is in
+  }
   return data.html_url;
 }
 
