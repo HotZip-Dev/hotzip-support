@@ -22,7 +22,7 @@ body:
     attributes:
       label: Addon version
       description: Shown in the in-game AddOns list (character select → AddOns).
-      placeholder: v1.0.2
+      placeholder: 1.0.3
   - type: textarea
     id: what
     attributes:

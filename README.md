@@ -1,11 +1,8 @@
 # HotZip Addons support
 
-Bug reports and ideas for **HotZip Addons**, made for World of Warcraft: Forever.
+Report a bug or share an idea at [hotzip.dev/support](https://hotzip.dev/support/). No account needed.
 
-**[Open an issue →](https://github.com/HotZip-Dev/hotzip-support/issues/new/choose)**
-
-This is the one place we read every report. Comments on CurseForge and Wago
-aren't checked often, so please post here.
+HotZip Addons are made for World of Warcraft: Forever.
 
 ## Addons
 
@@ -24,5 +21,3 @@ aren't checked often, so please post here.
 - the addon and its version (shown in the in-game AddOns list)
 - what you did, what you expected, and what happened
 - any error text. Turn errors on with `/console scriptErrors 1`, or use BugSack.
-
-You need a free GitHub account to open an issue.

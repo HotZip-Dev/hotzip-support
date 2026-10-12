@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OnlyRares · HotZip Addons</title>
-<meta name="description" content="Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Learns what each rare drops from your own loot.">
+<meta name="description" content="Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Keeps track of what each rare drops for you.">
 <meta name="theme-color" content="#0D1018">
 <meta property="og:title" content="OnlyRares · HotZip Addons">
-<meta property="og:description" content="Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Learns what each rare drops from your own loot.">
+<meta property="og:description" content="Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Keeps track of what each rare drops for you.">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -27,7 +27,7 @@
     <img class="icon icon-lg" src="/assets/addons/onlyrares.png" alt="OnlyRares logo" width="112" height="112">
     <div>
       <h1>OnlyRares</h1>
-      <p>Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Learns what each rare drops from your own loot.</p>
+      <p>Alerts you when a rare mob is nearby, with a one-click target button, and pins every rare you've seen on the world map and minimap. Keeps track of what each rare drops for you.</p>
       <span class="badge">Latest: 1.0.0</span>
     </div>
   </div>
@@ -39,16 +39,14 @@
 <p>OnlyRares alerts you when a rare mob is nearby, gives you a one-click button to target it, and pins every rare you've seen on your world map and minimap.</p>
 <h2>Features</h2>
 <ul>
-<li><strong>Rare alerts.</strong> When a rare shows up on a nameplate, as your target or mouseover, or as a map marker, you get a sound, a raid-warning line, a chat line and a small alert window. Each spawn alerts you once.</li>
-<li><strong>One-click target.</strong> The alert window's <strong>Target</strong> button targets the rare. <strong>Drops</strong> shows what it has dropped for you. <strong>Broadcast</strong> posts its location to party chat with a clickable map pin (only while you're in a party). Drag the window to move it, right-click to dismiss it. It closes itself after 90 seconds.</li>
-<li><strong>Combat safe.</strong> In combat the sound and raid-warning line still play right away. The window appears as soon as combat ends.</li>
-<li><strong>Rare tracker.</strong> Every rare you see is saved with where and when you saw it. Pins show &quot;last seen&quot;, how often it was seen at that spot, &quot;last killed&quot; and the fastest respawn you've observed. Gold stars are rare elites, silver stars are rares.</li>
+<li><strong>Rare alerts.</strong> When a rare is nearby, you get a sound, a raid-warning line, a chat line and a small alert window. Each spawn alerts you once.</li>
+<li><strong>One-click target.</strong> The alert window's <strong>Target</strong> button targets the rare, <strong>Drops</strong> shows what it has dropped for you, and <strong>Broadcast</strong> posts its location to party chat with a clickable map pin. Drag the window to move it, right-click to dismiss it.</li>
+<li><strong>Rare tracker.</strong> Every rare you see gets a pin on your world map: gold stars for rare elites, silver stars for rares. Pins show &quot;last seen&quot;, how often it was seen at that spot, &quot;last killed&quot; and the fastest respawn you've seen.</li>
 <li><strong>World map pins.</strong> Left-click a pin to set a waypoint, right-click to see the rare's drops, Shift+right-click to forget that spot.</li>
-<li><strong>Minimap pins.</strong> Nearby rares show on your minimap with the same tooltip plus the distance. The 2 nearest rares out of range sit on the minimap's edge with their distance in yards. Rotating and square minimaps work too.</li>
-<li><strong>Drops learned from your loot.</strong> Every time you loot a rare, its items are recorded with how often they dropped (for example &quot;3/5 60%&quot;). Nothing is pre-loaded, so it stays accurate as Forever adds new rare drops. Shift-click an item to link it in chat, Ctrl-click to preview it.</li>
-<li><strong>Party sync.</strong> Party members who also run OnlyRares share sightings and kills automatically. Everyone gets the map pin and the kill time, plus an alert (&quot;spotted by ...&quot;) when they're in the same zone.</li>
+<li><strong>Minimap pins.</strong> Nearby rares show on your minimap with their distance, and the nearest ones farther out wait on its edge. Left-click the minimap button to show or hide all pins, right-click for minimap pins only, and drag it to move it.</li>
+<li><strong>Drops from your loot.</strong> Every time you loot a rare, its items are recorded with how often they dropped (for example &quot;3/5 60%&quot;). Shift-click an item to link it in chat, Ctrl-click to preview it.</li>
+<li><strong>Party sync.</strong> Party members who also use OnlyRares see your sightings and kills, and you see theirs. When one of them spots a rare in your zone, you get an alert too.</li>
 <li><strong>Ignore list.</strong> Stop alerts and pins for a rare you don't care about.</li>
-<li><strong>Minimap button.</strong> Left-click shows or hides all pins, right-click shows or hides only the minimap pins. Drag it around the minimap's edge.</li>
 </ul>
 <h2>Commands</h2>
 <table>
@@ -57,13 +55,13 @@
 <tr><td><code>/or</code> or <code>/onlyrares</code></td><td>How many rares you've recorded, plus the command list</td></tr>
 <tr><td><code>/or list</code></td><td>Every recorded rare, most recent first</td></tr>
 <tr><td><code>/or drops &lt;name&gt;</code></td><td>Open a rare's recorded drops (no name uses your target)</td></tr>
-<tr><td><code>/or test</code></td><td>Show a test alert so you can check the sound and move the window</td></tr>
+<tr><td><code>/or test</code></td><td>Preview the alert, to check the sound and move the window</td></tr>
 <tr><td><code>/or sound</code></td><td>Turn the alert sound on or off</td></tr>
 <tr><td><code>/or sync</code></td><td>Turn party sync on or off (on by default)</td></tr>
 <tr><td><code>/or show</code>, <code>/or hide</code>, <code>/or toggle</code></td><td>Show or hide all world map and minimap pins</td></tr>
 <tr><td><code>/or minimap</code></td><td>Show or hide the minimap pins only</td></tr>
 <tr><td><code>/or button</code></td><td>Show or hide the minimap button</td></tr>
-<tr><td><code>/or ignore &lt;name&gt;</code></td><td>Stop alerts and pins for a rare (no name uses your target; with neither, lists ignored rares)</td></tr>
+<tr><td><code>/or ignore &lt;name&gt;</code></td><td>Stop alerts and pins for a rare (no name uses your target, or lists ignored rares)</td></tr>
 <tr><td><code>/or unignore &lt;name&gt;</code></td><td>Undo an ignore</td></tr>
 <tr><td><code>/or forget &lt;name&gt;</code></td><td>Delete a recorded rare</td></tr>
 <tr><td><code>/or clear confirm</code></td><td>Delete every recorded rare</td></tr>
@@ -71,9 +69,9 @@
 </table>
 <h2>Good to know</h2>
 <ul>
-<li>Your rares, drops and settings are saved per account, so all your characters share them.</li>
-<li>Only rares you (or your party) have seen get pins. Nothing is pre-loaded.</li>
-<li>Turn on enemy nameplates (V) so rares are spotted from further away.</li>
+<li>Turn on enemy nameplates (V) so you spot rares from farther away.</li>
+<li>All your characters share your rares, drops and settings.</li>
+<li>Your map starts empty and fills in as you and your party find rares.</li>
 </ul>
   </article>
   <div class="callout">

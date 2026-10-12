@@ -36,17 +36,17 @@
       <a class="btn btn-ghost" href="https://www.curseforge.com/wow/addons/onlyherbs">Get it on CurseForge</a>
   </div>
   <article class="prose">
-<p>OnlyHerbs remembers every herb you pick and puts it on your map, so you can build your own herbalism routes and see how long ago each spot was last picked clean.</p>
+<p>OnlyHerbs remembers every herb you pick and puts it on your map, so you can build your own herbalism routes and see how long ago each spot was last picked.</p>
 <h2>Features</h2>
 <ul>
-<li><strong>Automatic recording.</strong> Pick an herb and its spot is saved. No setup, no imports.</li>
-<li><strong>World map pins.</strong> Each saved spot shows the herb's icon. Hover to see the herb, how long ago you last picked it, and how many times you've harvested it.</li>
-<li><strong>Minimap rings.</strong> Nearby spots show as a ring colored by herb. When the herb is up, the <em>Find Herbs</em> dot appears inside the ring, so you can tell at a glance whether it's there.</li>
-<li><strong>Distance to the next herb.</strong> The 3 nearest spots out of minimap range stick to the minimap's edge with their distance in yards, like party member arrows. Hover any minimap pin for the herb, its distance and when you last picked it.</li>
-<li><strong>Shared spawn points.</strong> When the same spot grows different herbs, they stay on one pin, and the tooltip lists every herb you've seen there.</li>
+<li><strong>Automatic recording.</strong> Pick an herb and its spot is saved, with a short chat note the first time. No setup, no imports.</li>
+<li><strong>World map pins.</strong> Each saved spot shows the icon of the herb you last picked there. Hover to see the herb, how long ago you last picked it, and how many times you've harvested it.</li>
+<li><strong>Minimap rings.</strong> Nearby spots show as a ring in the herb's color. When the herb is up, the <em>Find Herbs</em> dot appears inside the ring, so you can tell at a glance whether it's there.</li>
+<li><strong>Distance to the next herb.</strong> The nearest spots out of minimap range stick to the minimap's edge with their distance in yards, like party member arrows. Hover any minimap pin for its distance and when you last picked it.</li>
+<li><strong>Shared spawn points.</strong> When the same spot grows different herbs, they stay on one pin, and its tooltip lists every herb you've seen there.</li>
 <li><strong>Waypoints.</strong> Left-click a world map pin to set a waypoint to it. <strong>Shift + right-click</strong> a pin to forget that one spot.</li>
 <li><strong>Ignore list.</strong> Tell OnlyHerbs to skip an herb you don't care about, and its pins are removed.</li>
-<li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Drag it anywhere around the minimap. Hover it to see how many spots you've saved.</li>
+<li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Hover it to see how many spots you've saved. Drag it anywhere around the minimap's edge.</li>
 </ul>
 <h2>Commands</h2>
 <table>
@@ -56,19 +56,17 @@
 <tr><td><code>/oh show</code>, <code>/oh hide</code>, <code>/oh toggle</code></td><td>Show or hide all pins</td></tr>
 <tr><td><code>/oh minimap</code></td><td>Show or hide minimap pins only</td></tr>
 <tr><td><code>/oh button</code></td><td>Show or hide the minimap button</td></tr>
-<tr><td><code>/oh ignore &lt;herb name&gt;</code></td><td>Stop recording an herb and remove its pins (full name, like Khadgar's Whisker)</td></tr>
+<tr><td><code>/oh ignore &lt;herb name&gt;</code></td><td>Stop recording an herb and remove its pins (full name, like <code>Khadgar's Whisker</code>)</td></tr>
 <tr><td><code>/oh ignore</code></td><td>List the herbs you're ignoring</td></tr>
 <tr><td><code>/oh unignore &lt;herb name&gt;</code></td><td>Start recording it again</td></tr>
-<tr><td><code>/oh clear</code></td><td>Delete every saved spot (type <code>/oh clear confirm</code> to go through with it)</td></tr>
+<tr><td><code>/oh clear</code></td><td>Delete every saved spot (asks you to type <code>/oh clear confirm</code>)</td></tr>
 </tbody>
 </table>
 <h2>Good to know</h2>
 <ul>
-<li>Nothing leaves your game. Only herbs <strong>you</strong> pick are recorded. OnlyHerbs doesn't scan the world, send addon messages or share data with anyone.</li>
-<li>Your data is saved per account, so all your characters build the same map.</li>
-<li>Herbs picked inside dungeons and other instances aren't recorded, since the game gives no map position there.</li>
-<li>Herbs OnlyHerbs doesn't know yet, like new Forever ones, are still recorded. They get the Herbalism icon and a white ring.</li>
-<li>It's the sister addon of <strong>OnlyOres</strong>, which does the same for mining. The two run side by side.</li>
+<li>Your map starts empty and fills in as you pick.</li>
+<li>All your characters share one map.</li>
+<li>Herbs inside dungeons aren't recorded.</li>
 </ul>
   </article>
   <div class="callout">

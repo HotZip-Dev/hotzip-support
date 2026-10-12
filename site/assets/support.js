@@ -1,6 +1,4 @@
-// Support form: posts the report to the relay, which opens a GitHub issue.
-// The relay address comes from the form (data-endpoint); empty means the form
-// isn't open yet and shows a short note instead.
+// Support form: sends the report, then opens the thanks page.
 (function () {
   "use strict";
 
@@ -55,12 +53,6 @@
   });
   syncType();
 
-  if (!ENDPOINT) {
-    submit.disabled = true;
-    document.getElementById("form-closed").hidden = false;
-    return;
-  }
-
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var data = {
@@ -69,7 +61,7 @@
       version: isIdea() ? "" : form.elements.version.value.trim(),
       details: form.elements.details.value.trim(),
       errors: isIdea() ? "" : form.elements.errors.value.trim(),
-      website: form.elements.website.value // honeypot: people leave it empty
+      website: form.elements.website.value
     };
     if (!data.addon || !data.details) {
       showStatus(TEXT[data.type].missing, true);

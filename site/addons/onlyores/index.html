@@ -40,14 +40,13 @@
 <h2>Features</h2>
 <ul>
 <li><strong>Automatic recording.</strong> Mine a node and its spot is saved, with a short chat note the first time. No setup, no imports.</li>
-<li><strong>World map pins.</strong> Each saved spot shows the icon of the ore you last mined there. Hover to see the ore type, how long ago you last mined it, and your visits and taps.</li>
-<li><strong>Minimap rings.</strong> Nearby spots show as a ring in the ore's color. When the vein is up, the <em>Find Minerals</em> dot appears inside the ring, so you can tell at a glance whether it's there. Hover a ring for its distance and last-mined time.</li>
-<li><strong>Distance to the next vein.</strong> The 3 nearest spots out of minimap range stick to the minimap's edge with their distance in yards, like party member arrows. Works with a rotating or square minimap.</li>
+<li><strong>World map pins.</strong> Each saved spot shows the icon of the ore you last mined there. Hover to see the ore, how long ago you last mined it, and your visits and taps. Several hits on the same vein count as one visit.</li>
+<li><strong>Minimap rings.</strong> Nearby spots show as a ring in the ore's color. When the vein is up, the <em>Find Minerals</em> dot appears inside the ring, so you can tell at a glance whether it's there.</li>
+<li><strong>Distance to the next vein.</strong> The nearest spots out of minimap range stick to the minimap's edge with their distance in yards, like party member arrows. Hover any minimap pin for its distance and when you last mined it.</li>
 <li><strong>Shared spawn points.</strong> When the same spot rolls different ores (Tin/Silver, Iron/Gold), they stay on one pin, and its tooltip lists every ore you've seen there.</li>
-<li><strong>Built for multi-tap veins.</strong> Forever veins take 1-4 hits. Hitting the same vein again within 2 minutes counts as one visit.</li>
-<li><strong>Waypoints.</strong> Left-click a world map pin to set a waypoint to it.</li>
-<li><strong>Forget a spot.</strong> Shift + right-click a world map pin to remove that one spot.</li>
-<li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Hover to see how many spots you've saved. Drag it anywhere around the minimap's edge.</li>
+<li><strong>Waypoints.</strong> Left-click a world map pin to set a waypoint to it. <strong>Shift + right-click</strong> a pin to forget that one spot.</li>
+<li><strong>Ignore list.</strong> Tell OnlyOres to skip a node type you don't care about, and its pins are removed.</li>
+<li><strong>Minimap button.</strong> Left-click to show or hide all pins, right-click for minimap pins only. Hover it to see how many spots you've saved. Drag it anywhere around the minimap's edge.</li>
 </ul>
 <h2>Commands</h2>
 <table>
@@ -57,7 +56,7 @@
 <tr><td><code>/oo show</code>, <code>/oo hide</code>, <code>/oo toggle</code></td><td>Show or hide all pins</td></tr>
 <tr><td><code>/oo minimap</code></td><td>Show or hide minimap pins only</td></tr>
 <tr><td><code>/oo button</code></td><td>Show or hide the minimap button</td></tr>
-<tr><td><code>/oo ignore &lt;node name&gt;</code></td><td>Stop recording a node type (full name, like <code>Copper Vein</code>) and remove its pins</td></tr>
+<tr><td><code>/oo ignore &lt;node name&gt;</code></td><td>Stop recording a node type and remove its pins (full name, like <code>Copper Vein</code>)</td></tr>
 <tr><td><code>/oo ignore</code></td><td>List the node types you're ignoring</td></tr>
 <tr><td><code>/oo unignore &lt;node name&gt;</code></td><td>Start recording it again</td></tr>
 <tr><td><code>/oo clear</code></td><td>Delete every saved spot (asks you to type <code>/oo clear confirm</code>)</td></tr>
@@ -65,9 +64,9 @@
 </table>
 <h2>Good to know</h2>
 <ul>
-<li>Only nodes <strong>you</strong> mine are recorded. OnlyOres doesn't scan the world, and no data leaves your game: no addon messages, no chat channels, no sharing.</li>
-<li>Your data is saved per account, so all your characters build the same map.</li>
-<li>Nothing is recorded inside dungeons and other instances, where the game gives no map position.</li>
+<li>Your map starts empty and fills in as you mine.</li>
+<li>All your characters share one map.</li>
+<li>Nodes inside dungeons aren't recorded.</li>
 </ul>
   </article>
   <div class="callout">
